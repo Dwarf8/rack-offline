@@ -68,7 +68,7 @@ module Rack
       
       headers = {
         "Content-Type" => "text/cache-manifest",
-        "Expires" => DateTime.current,
+        "Expires" => "Fri, 01 Jan 1990 00:00:00 GMT",
         "Cache-Control" => "max-age=0, no-cache, no-store, must-revalidate",
         "Pragma" => "no-cache"
       }
