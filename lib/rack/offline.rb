@@ -39,10 +39,12 @@ module Rack
       else
         @cache_interval = (options[:cache_interval] || UNCACHED_KEY_INTERVAL).to_i
       end
+      
     end
 
     def call(env)
-      key = @key || uncached_key
+      #key = @key || uncached_key
+      key = ENV["HEROKU_RELEASE_NAME"]
 
       body = ["CACHE MANIFEST"]
       body << "# #{key}"
