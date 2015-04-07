@@ -68,9 +68,9 @@ module Rack
       
       headers = {
         "Content-Type" => "text/cache-manifest",
-        #"Expires" => "Fri, 01 Jan 1990 00:00:00 GMT",
-        #"Cache-Control" => "no-cache, must-revalidate",
-        #"Pragma" => "no-cache"
+        "Expires" => "Fri, 01 Jan 1990 00:00:00 GMT",
+        "Cache-Control" => "no-cache, must-revalidate",
+        "Pragma" => "no-cache"
       }
 
       [200, headers, [body.join("\n")]]
